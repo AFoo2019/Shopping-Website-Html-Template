@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://use.fontawesome.com/releases/v5.0.0/css/all.css');
+:root {
+  --main-bg-color: #e0e0e0;/*light grey*/
+  --main-color: #2E2E2E;/*dark grey*/
+  --second-color: #fce4ec;/*ligh deeppink*/
+  --accent-color:deeppink;
+  --second-accent-color:#76ff03;/*lemon green*/
+}
+html {
+  min-height: 100%;
+}
+body{
+  width:100vw;
+  height:100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+}
+header{
+  position:fixed;
+  z-index:20;
+  width:100vw;
+}
+main{
+  padding-top:10vh;
+}
+footer{
+  background-color:var(--main-color);
+  height:auto;
+  bottom:0;
+}
+ul, li{
+  list-style: none;
+}
+.logo{
+  width:10vh;
+}
+img {
+  width: 50%;
+  height: auto;
+}
+.dropdown1 {
+}
+select{
+  margin-bottom: 10vh;
+}
+.dropdownmenu a, footer a{
+  color:var(--main-bg-color);
+}
+.promo-containers{
+  margin:1%;
+  height:60vh;
+  background-color: var(--main-bg-color);
+}
+.product-containers{
+  height:200px;
+}
+.nav-thumbnails-container, .promo-containers{
+  padding:0;
+  overflow: hidden!important;
+}
+.login-logo-container{
+  height:72px;
+}
+.nav-thumbnails, .promothumbnails, .productthumbnails{
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    width: 100%;
+}
+.productthumbnails{
+  object-fit: contain;
+}
+.login-logo{
+    object-fit: contain; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    width: 100%;
+}
+.nav-thumbnails{
+    height: 150px;
+}
+.promothumbnails{
+    height:100%;
+}
+.nav-thumbnails:hover, .promothumbnails:hover{
+  transform: scale(1.2);
+  transition: all .3s ease-out;
+}
+main a{
+  color:var(--accent-color);
+}
+main a:hover{
+  color:#76ff03;
+}
+/*meganav styling*/
+.dropdownmenu {
+    display: none;
+    position: absolute;
+    height: auto;
+    z-index: 19;
+    width: 100vw;
+    background-color: var(--main-color) ;/*navbar color*/
+    list-style-type: none;
+    padding: 3%;
+    left:0;
+}
+.dropdown1:hover .dropdownmenu{
+  display:flex;
+}
+.navbar, .dropdownmenu a:hover, footer a:hover{
+  color:var(--accent-color);
+  background-color:var(--main-color) ;
+}
+.dropdowncolumns{
+  border:0;
+  border-right: solid 2px;
+}
+.dropdown-content li {
+    list-style-type: none;
+    margin: 0;
+    color: black;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+.dropdown-content a {
+    padding-top: 1% !important;
+    text-decoration: none!important;
+}
+
+/*bottom banner styling*/
+.bottom-banner{
+  width:100vw;
+  background-color: var(--second-accent-color);
+}
+
+/*modal styling*/
+.modal-list{
+  height:40vh;
+}
+#fade{
+  display:none;
+  z-index=900;/*on top of everything but the modal*/
+  position: fixed;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.8);
+  left: 0;
+  top: 0;
+}
+.mymodal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1000; /* Sit on top of everything*/
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 1000vh; /* Full height */
+
+    overflow: scroll; /* no scroll available */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content ,.modal-content-alt{
+    background-color: var(--main-color);
+    margin: auto;
+    padding: 20px;
+    border: 0;
+    height:auto;
+    width: 30vw;
+    border-radius: 0;
+
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    overflow-y: hidden;
+}
+.modal-content-alt{
+  display:none;
+}
+/* The Close Button */
+.close {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*form styling*/
+.form-signin input{
+  border:none;
+  border-bottom: 1px solid  #4976a0!important;
+  border-radius: 0px;
+  background: transparent;
+  text-align: center;
+
+}
+#lnk-signup, #lnk-signin{
+  color: var(--main-bg-color);
+}
+.search input:focus, .form-signin input,.form-signin input:focus {
+  color: var(--accent-color);
+  border:none;
+  border-bottom: 1px solid  var(--accent-color)!important;
+  border-radius: 0px;
+  background: transparent;
+  outline: none!important;
+  box-shadow: none!important;
+}
+/*checkbox styling*/
+.checkbox {
+  margin-bottom: 72px;
+  font-weight: normal;
+}
+.form-check-label span {
+  color:var(--main-color);
+}
+label input[type="checkbox"] {
+    display: none;
+}
+i.fa .fa.fa-check-square-o.fa-square-o{
+
+}
+label input[type="checkbox"] ~ i.fa.fa-square-o{
+    color: var(--main-color);    display: inline;
+}
+label input[type="checkbox"] ~ i.fa.fa-check-square-o{
+    display: none;
+}
+label input[type="checkbox"]:checked ~ i.fa.fa-square-o{
+    display: none;
+}
+label input[type="checkbox"]:checked ~ i.fa.fa-check-square-o{
+    color: var(--main-color);    display: inline;
+}
+/*slider*/
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--main-color);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--main-color);
+  cursor: pointer;
+}
+/*reviews*/
+.reviews li:nth-child(odd), .reviews li:nth-child(odd) {background-color: var(--second-color);}
+.reviews li:nth-child(even), .products li:nth-child(even) {background-color: var(--main-bg-color);}
+
+/*review rating*/
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: Font Awesome\ 5 Free;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: var(--main-color);
+ float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: var(--accent-color);  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: var(--accent-color);  }
